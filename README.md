@@ -1,1 +1,4 @@
-# python-leetcode
+# typescript-leetcode
+
+# Reference
+https://github.com/Tcdian/LeetCode
