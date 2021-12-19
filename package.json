@@ -1,0 +1,29 @@
+{
+  "name": "typescript-leetcode",
+  "version": "1.0.0",
+  "description": "# Reference https://github.com/Tcdian/LeetCode",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "build":"tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabaao/typescript-leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabaao/typescript-leetcode/issues"
+  },
+  "homepage": "https://github.com/sabaao/typescript-leetcode#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0"
+  },
+  "dependencies": {
+    "typescript": "^4.5.4"
+  }
+}
