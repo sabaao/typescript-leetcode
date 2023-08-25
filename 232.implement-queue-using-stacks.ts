@@ -6,23 +6,35 @@
 
 // @lc code=start
 class MyQueue {
-  array: number[] = [];
-  constructor() {}
+  stackIn: number[];
+  stackOut: number[];
+  constructor() {
+    this.stackIn = [];
+    this.stackOut = [];
+  }
 
   push(x: number): void {
-    this.array.push(x);
+    this.stackIn.push(x);
   }
 
   pop(): number {
-    return this.array.shift();
+    if (this.stackOut.length === 0) {
+      while (this.stackIn.length > 0) {
+        this.stackOut.push(this.stackIn.pop());
+      }
+    }
+
+    return this.stackOut.pop();
   }
 
   peek(): number {
-    return this.array[0];
+    let n = this.pop();
+    this.stackOut.push(n);
+    return n;
   }
 
   empty(): boolean {
-    return this.array.length === 0;
+    return this.stackIn.length === 0 && this.stackOut.length === 0;
   }
 }
 
